@@ -12,7 +12,8 @@ You can then write your own stream alerts in HTML/CSS/JS by connecting to the we
     <title>My latest follower widget</title>
     <script>
         function handleEvent(streamEvent) {
-          // Trigger an alert however you want, CSS animations, videos, a full blown React app, whatever. Eg:
+          // Trigger an alert however you want, CSS animations, videos,
+          // a full blown React app, whatever. Eg:
           switch(event.type) {
             case 'TwitchFollow':
               document.body.textContent = `Latest follower: ${event.payload.user.displayName}`;
