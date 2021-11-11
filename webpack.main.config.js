@@ -14,8 +14,10 @@ module.exports = {
     {
       apply: (compiler) => {
         compiler.hooks.done.tap("AfterEmitPlugin", (compilation) => {
-          execSync("chmod +x .webpack/main/native_modules/bin/ngrok");
-          execSync("chmod +x .webpack/main/native_modules/ngrok");
+          try {
+            execSync("chmod +x .webpack/main/native_modules/bin/ngrok");
+            execSync("chmod +x .webpack/main/native_modules/ngrok");
+          } catch (e) {}
         });
       },
     },

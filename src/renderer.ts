@@ -6,7 +6,7 @@ websocket.onmessage = (event) => handleEvent(JSON.parse(event.data));
 
 /***/
 
-const LIST_MAX = 5;
+const LIST_MAX = 15;
 
 const eventsListElement = document.getElementById("events-list");
 const eventsList: HTMLLIElement[] = [];

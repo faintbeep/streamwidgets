@@ -90,6 +90,8 @@ async function listen(emit: Emit, settings: TwitchSettings) {
       "channel:read:redemptions",
     ]);
 
+    await apiClient.eventSub.deleteAllSubscriptions();
+
     await listener.listen();
 
     const followSubscription = await listener
